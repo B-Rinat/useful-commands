@@ -4,13 +4,14 @@
 | -------- | ------------- |
 | <code>$ docker ps</code> | List only running docker containers (CONTAINER_ID, IMAGE, COMMAND, CREATED, STATUS, PORTS, NAMES) |
 | <code>$ docker ps -a</code> | List all running and stopped docker containers (CONTAINER_ID, IMAGE, COMMAND, CREATED, STATUS, PORTS, NAMES) |
-| <code>$ docker restart NAME/CONTAINER_ID</code> | Restart docker container with CONTAINER_ID, data does not vanish. Combination of 2 commands `docker stop` and `docker start` |
-| <code>$ docker stop NAME/CONTAINER_ID</code> | Stop docker container with CONTAINER_ID, data does not vanish. |
-| <code>$ docker start NAME/CONTAINER_ID</code> | Start docker container with CONTAINER_ID, data does not vanish. |
-| <code>$ docker logs --tail 100 NAME/CONTAINER_ID</code> | Inspect the last 100 lines of the logs with CONTAINER_ID |
-| <code>$ docker logs -f --tail 100 NAME/CONTAINER_ID</code> | Inspect the last 100 lines of the logs with CONTAINER_ID, also enter in -f follow mode, i.e. streams the logs in real-time |
-| <code>$ docker logs -t --tail 100 NAME/CONTAINER_ID</code> | Inspect the last 100 lines of the logs with CONTAINER_ID, also show timestamp -t |
-| <code>$ docker inspect NAME/CONTAINER_ID</code> | Retrieving low-level information about Docker objects (by default in JSON array format). Provides a comprehensive view of various Docker constructs (Container: ID, name, Mounted volumes and bind mounts, Log path, Network settings, CPU, memory; Images; Networks; Volumes; etc.) |
+| <code>$ docker restart NAME_OR_CONTAINER_ID</code> | Restart docker container with CONTAINER_ID, data does not vanish. Combination of 2 commands `docker stop` and `docker start` |
+| <code>$ docker stop NAME_OR_CONTAINER_ID</code> | Stop docker container with CONTAINER_ID, data does not vanish. |
+| <code>$ docker start NAME_OR_CONTAINER_ID</code> | Start docker container with CONTAINER_ID, data does not vanish. |
+| <code>$ docker logs --tail 100 NAME_OR_CONTAINER_ID</code> | Inspect the last 100 lines of the logs with CONTAINER_ID |
+| <code>$ docker logs -f --tail 100 NAME_OR_CONTAINER_ID</code> | Inspect the last 100 lines of the logs with CONTAINER_ID, also enter in -f follow mode, i.e. streams the logs in real-time |
+| <code>$ docker logs -t --tail 100 NAME_OR_CONTAINER_ID</code> | Inspect the last 100 lines of the logs with CONTAINER_ID, also show timestamp -t |
+| <code>$ docker logs -tfn 100 NAME_OR_CONTAINER_ID</code> | Inspect the last 100 lines of the logs with CONTAINER_ID, also show timestamp -t and follow output (combined command of several options) |
+| <code>$ docker inspect NAME_OR_CONTAINER_ID</code> | Retrieving low-level information about Docker objects (by default in JSON array format). Provides a comprehensive view of various Docker constructs (Container: ID, name, Mounted volumes and bind mounts, Log path, Network settings, CPU, memory; Images; Networks; Volumes; etc.) |
 
 # Linux Commands
 
@@ -18,7 +19,8 @@
 | -------- | ------------- |
 | <code>$ mv PATH_TO_FILE PATH_TO_FOLDER_TO_MOVE</code> | Moves file into directory. The file will disappear from original PATH_TO_FILE file path and be moved to PATH_TO_FOLDER_TO_MOVE directory |
 | <code>$ ls -l path/to/directory</code> | Lists contents of the directory without actually changing directory. Good for quick inspection |
-| <code>$ netstat -tulpn | grep ":PORT"</code> | lists all processes/programs PID that listen on port PORT (ex, 18084) |
+| <code>$ netstat -tulpn \| grep ":PORT"</code> | lists all processes/programs PID that listen on port PORT (ex, 18084) |
+| <code>$ man PROGRAM_NAME</code> | shows details of the command such as SYNOPSIS, DESCRIPTION, OPTIONS |
 
 
 # Let's Encrypt with Certbot
