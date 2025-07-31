@@ -13,6 +13,13 @@
 | <code>$ docker logs -tfn 100 NAME_OR_CONTAINER_ID</code> | Inspect the last 100 lines of the logs with CONTAINER_ID, also show timestamp -t and follow output (combined command of several options) |
 | <code>$ docker inspect NAME_OR_CONTAINER_ID</code> | Retrieving low-level information about Docker objects (by default in JSON array format). Provides a comprehensive view of various Docker constructs (Container: ID, name, Mounted volumes and bind mounts, Log path, Network settings, CPU, memory; Images; Networks; Volumes; etc.) |
 
+# NGINX Commands
+| Command | Description |
+| -------- | ------------- |
+| <code>$ sudo systemctl reload nginx | This is the most common and recommended command after making changes to your Nginx configuration files. It reloads the configuration without dropping active connections. Nginx will: 1. Test the new configuration syntax. 2. If the syntax is OK, it starts new worker processes with the new configuration. 3. Gracefully shuts down the old worker processes (allowing them to finish serving current requests). |
+| <code>$ sudo nginx -t</code> | Test Nginx Configuration Syntax. This is crucial before reloading or restarting Nginx. It checks the syntax of your Nginx configuration files and also verifies if any referenced files (like SSL certificates) exist and are accessible. It will report "syntax is ok" and "test is successful" if everything is good. If there are errors, it will pinpoint them. |
+| <code>$ ls -l /etc/nginx/ </code> | default location of NGINX config files |
+
 # Linux Commands
 
 | Command | Description |
