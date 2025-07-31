@@ -8,6 +8,8 @@
 | <code>$ docker stop NAME/CONTAINER_ID</code> | Stop docker container with CONTAINER_ID, data does not vanish. |
 | <code>$ docker start NAME/CONTAINER_ID</code> | Start docker container with CONTAINER_ID, data does not vanish. |
 | <code>$ docker logs --tail 100 NAME/CONTAINER_ID</code> | Inspect the last 100 lines of the logs with CONTAINER_ID |
+| <code>$ docker logs -f --tail 100 NAME/CONTAINER_ID</code> | Inspect the last 100 lines of the logs with CONTAINER_ID, also enter in -f follow mode, i.e. streams the logs in real-time |
+| <code>$ docker logs -t --tail 100 NAME/CONTAINER_ID</code> | Inspect the last 100 lines of the logs with CONTAINER_ID, also show timestamp -t |
 | <code>$ docker inspect NAME/CONTAINER_ID</code> | Retrieving low-level information about Docker objects (by default in JSON array format). Provides a comprehensive view of various Docker constructs (Container: ID, name, Mounted volumes and bind mounts, Log path, Network settings, CPU, memory; Images; Networks; Volumes; etc.) |
 
 # Linux Commands
