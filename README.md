@@ -1,3 +1,9 @@
+# Node PM2 process manager
+
+| Command | Description |
+| -------- | ------------- |
+| <code>pm2 start file-name.js</code> | runs a process with single file `file-name.js` using pm2 |
+
 # Docker
 
 | Command | Description |
