@@ -3,6 +3,8 @@
 | Command | Description |
 | -------- | ------------- |
 | <code>pm2 start file-name.js</code> | runs a process with single file `file-name.js` using pm2 |
+| <code>pm2 logs 0 --lines 100</code> | show the last 100 lines of logs for app with ID 0 and then continues streaming new logs in real time |
+| <code>pm2 logs 0 --lines 100 --nostream</code> | show the last 100 lines of logs for app with ID 0 without streaming |
 
 # Docker
 
