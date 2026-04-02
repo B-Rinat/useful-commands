@@ -1,3 +1,11 @@
+# Git
+| Command | Description |
+| -------- | ------------- |
+| <code>git stash push -u -m "WIP: current work"</code> | stashes current uncommitted changes in branch, including -u untracked files, and -m message for that stash |
+| <code>git stash list</code> | view available stashes |
+| <code>git stash apply stash@{1}</code> | applies the changes stored in a specific stash entry (the second stash in the stack) to your current working directory. Keeps the stash entry in the stash list after executing this command. If the code has changed since the stash was created, Git may produce conflicts. |
+| <code>git stash pop stash@{1}</code> | applies the changes stored in a specific stash entry to your current working directory, removes stash if successful. If the code has changed since the stash was created, Git may produce conflicts. |
+
 # Node PM2 process manager
 
 | Command | Description |
